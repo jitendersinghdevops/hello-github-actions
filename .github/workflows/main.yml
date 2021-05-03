@@ -1,12 +1,15 @@
-name: A workflow for my Hello World file
-on: push
+name: test my script
+on: push:
+    branches:
+    - testscript
 
 jobs:
   build:
     name: Hello world action
-    runs-on: ubuntu-latest
+    runs-on: windows-2019
+
     steps:
-      - uses: actions/checkout@v1
-      - uses: ./action-a
-        with:
-          MY_NAME: "jitender-singh"
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: .\MyScripts\storageaccount1.ps1
+      shell: powershell
