@@ -1,5 +1,6 @@
 name: test my script
-on: push:
+on: 
+  push:
     branches:
     - testscript
 
