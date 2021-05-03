@@ -6,7 +6,7 @@
 .EXAMPLE
    ./storageaccount2.ps1
 #>
-az login 
+az login -u ${secrets.USERNAME} -p ${secrets.PASSWORD}
 $test_rg = az group create `
    --location eastus2 `
    --name abcd-$(Get-Random) | ConvertFrom-Json
