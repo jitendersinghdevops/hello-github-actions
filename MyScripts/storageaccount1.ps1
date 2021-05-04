@@ -6,7 +6,7 @@
 .EXAMPLE
    ./storageaccount2.ps1
 #>
-az login -u ${secrets.USERNAME} -p ${secrets.PASSWORD}
+az login  -u ${{secrets.USERNAME}} -p ${{secrets.PASSWORD}}
 
 
 $test_rg = az group create `
